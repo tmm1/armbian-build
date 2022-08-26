@@ -252,7 +252,7 @@ jobs:
     permissions:
       contents: none
     needs: [Kernel,Desktop,Firmware,legacy,current,edge]
-    if: ${{ (inputs.sourcerepo == 'nightly' || inputs.sourcerepo == '') && ${{ github.event.inputs.packagesrepo }} != "no" }}
+    if: ${{ (inputs.sourcerepo == 'nightly' || inputs.sourcerepo == '') && github.event.inputs.packagesrepo != "no" }}
     runs-on: ubuntu-latest
     steps:
       - name: Delete control artefact
