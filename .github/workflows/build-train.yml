@@ -94,7 +94,7 @@ jobs:
       contents: none
     needs: Check
     if: ${{ success() && github.repository_owner == 'Armbian' }}
-    uses: armbian/scripts/.github/workflows/build-kernel.yml@master
+    uses: armbian/scripts/.github/workflows/build-kernel.yml@AR-1407
 
     with:
       uploading: true
